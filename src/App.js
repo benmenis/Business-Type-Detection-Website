@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TypeList from './components/TypeList';
+import SearchBar from './components/SearchBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+
+    const onSubmit = (term) => {
+        console.log(term);
+    };
+
+    return(
+        <div className="ui container" style={{ marginTop:'15px' }}>
+            <div className="ui grid">
+                <div className="ui row">
+                    <div className="five wide column">
+                        <TypeList />
+                    </div>
+                    <div className="eleven wide column">
+                        <SearchBar onSubmit={onSubmit}/>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    );
 }
 
 export default App;
