@@ -7,6 +7,8 @@ const Result = result => {
         <div className="result">
             <h1>{result.result}</h1>
             <div>tyring to add something for git practice</div>
+
+            <div>tyring to add another pice for git practice</div>
         </div>
     );
 };
