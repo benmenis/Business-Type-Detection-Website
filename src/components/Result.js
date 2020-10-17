@@ -6,6 +6,7 @@ const Result = result => {
     return(
         <div className="result">
             <h1>{result.result}</h1>
+            <div>tyring to add something for git practice</div>
         </div>
     );
 };
