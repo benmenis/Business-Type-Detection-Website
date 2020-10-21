@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import TypeList from './components/TypeList';
-import SearchBar from './components/SearchBar';
-import Result from './components/Result';
+import React, { useEffect, useState } from 'react';
+import TypeList from './TypeList';
+import SearchBar from './SearchBar';
+import Result from './Result';
 
-
-const App = () => {
+const Home = (props) => {
 
     const [result, setResult] = useState('');
 
@@ -15,14 +14,21 @@ const App = () => {
         setResult(term);
     };
 
+    useEffect( () => {
+        props.changeActive('home')
+    }, []);
+
+
     return(
-        <div className="ui container" style={{ marginTop:'15px' }}>
+        <div className="ui container" style={{ marginTop:'50px' }}>
             <div className="ui grid">
                 <div className="ui row">
                     <div className="three wide column">
                         <TypeList />
                     </div>
+
                     <div className="one wide column" />
+
                     <div className="eleven wide column">
                         <div className="ui row">
                             <SearchBar onSubmit={onSubmit}/>
@@ -31,6 +37,7 @@ const App = () => {
                             <Result result={result} />
                         </div>
                     </div>
+                    
                     <div className="one wide column" />
                 </div>
             </div>
@@ -38,4 +45,5 @@ const App = () => {
     );
 }
 
-export default App;
+
+export default Home;

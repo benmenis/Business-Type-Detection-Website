@@ -1,0 +1,14 @@
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: midnightblueS;
+    /* height: 10vh; */
+}
+
+.beforeresult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:  200px;
+}
