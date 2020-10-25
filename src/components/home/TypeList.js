@@ -16,7 +16,7 @@ const TypeList = (props) => {
 
     return(
         <div style= {{ textAlign:'center' }}>
-            <h2 className="ui block header" > TYPES </h2>
+            <h2 className="ui secondary inverted segment" >T Y P E S</h2>
             <div className="ui items" style = {{ overflow:'scroll', height:'500px' }}>{renderedTypes}</div>
         </div>
     );

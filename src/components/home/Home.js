@@ -2,18 +2,25 @@ import React, { useEffect, useState } from 'react';
 import TypeList from './TypeList';
 import SearchBar from './SearchBar';
 import Result from './Result';
+import Axios from 'axios';
 
-const Home = (props) => {
+const Home = props => {
 
     const [result, setResult] = useState('');
 
-    const onSubmit = (term) => {
-        console.log(term);
-        // request to API
-        // get response
-        setResult(term);
+    const onSubmit = async term => {
+
+        const response = await Axios.get(
+            'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/detect',
+            { params: { company_name: term }}
+        );
+
+        // console.log(response.data.company_name);
+        
+        setResult(response.data.company_name);
     };
 
+    // eslint-disable-next-line
     useEffect( () => {
         props.changeActive('home')
     }, []);
@@ -37,7 +44,7 @@ const Home = (props) => {
                             <Result result={result} />
                         </div>
                     </div>
-                    
+
                     <div className="one wide column" />
                 </div>
             </div>

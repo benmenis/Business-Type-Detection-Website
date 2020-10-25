@@ -7,7 +7,7 @@ const Api = (props) => {
     }, []);
 
     return(
-        <div className="ui container" style={{ marginTop:'100px' }}>
+        <div className="ui container" style={{ marginTop:'100px', paddingLeft:'200px' }}>
             <h1 className="ui header">Type Detection API</h1>
             <p>
                 this is our api. get started and use it easily.

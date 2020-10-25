@@ -1,3 +1,4 @@
+import './About.css';
 import React, { useEffect } from 'react';
 
 const About = (props) => {
@@ -7,16 +8,30 @@ const About = (props) => {
     }, []);
 
     return(
-        <div className="ui container" style={{ marginTop:'100px' }}>
-            <h1 className="ui header">About us</h1>
-            <p>
-                this site and API have been developed by us as a final project of Software Engineer BSc.
+        <div className="ui container" style={{ marginTop:'100px', paddingLeft:'200px' }}>
+            <h1 style = {{ fontSize:'50px' }}>About us</h1>
+            <br/>
+            <br/>
+            <div>
+                <p className="small">
+                    this site and the API have been developed by us as the final project of Software Engineer BSc.
+
+                    <h4 className='mid'>
+                        Using Machine Learning models, we can find for you the type of a Company or a Business. 
+                    </h4>
+                </p>
+            </div>
+            <br/>
+            <div className="ui header big">
+                <h3 className="big">What's it about?</h3>
+            </div>
+            <p className="small">
+                this web page is using API that develeoped by us to detect Company or Business type.
+                <h3>for this time it is working on companies in Israel only.</h3>
             </p>
-            <h3 className="ui header">What is about?</h3>
-            <p>
-                this api is specified to detect a type for company name.
-                for this time it is working on companies in Israel only.
-            </p>
+            <footer>
+                for more information.. 
+            </footer>
         </div>
     );
 };

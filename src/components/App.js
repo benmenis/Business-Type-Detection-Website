@@ -16,7 +16,7 @@ const App = () => {
     const [isActive, setIsActive] = useState({ home:'', about:'', api:'' });
 
     const changeActive = (s) => {
-        const newIsActive = {  home:false, about:false, api:false};
+        const newIsActive = {  home:'', about:'', api:''};
         
         if (s === 'home'){
             newIsActive.home = 'active';
@@ -43,10 +43,11 @@ const App = () => {
                             <Link className={`item ${isActive.api}`} to="/api" >Api</Link>
                             <Link className={`item ${isActive.about}`} to="/about" >About</Link>
                             <div className="right menu" style={{  }}>
-                                <a href='https://google.com' className="ui item">
+                                <a href='https://github.com/benmenis' className="ui item">
                                     <h3>
                                         <i className="github icon"/>
-                                    </h3>                                </a>
+                                    </h3>                               
+                                </a>
                             </div>
                         </div>
                     </div>
