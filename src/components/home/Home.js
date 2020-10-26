@@ -6,18 +6,18 @@ import Axios from 'axios';
 
 const Home = props => {
 
-    const [result, setResult] = useState('');
+    const [result, setResult] = useState(null);
 
     const onSubmit = async term => {
-
+        setResult({});
         const response = await Axios.get(
             'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/detect',
             { params: { company_name: term }}
         );
 
-        // console.log(response.data.company_name);
+        console.log(response);
         
-        setResult(response.data.company_name);
+        setResult(response.data);
     };
 
     // eslint-disable-next-line
