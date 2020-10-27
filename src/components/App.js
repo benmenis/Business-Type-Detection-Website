@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Home from './home/Home';
 import About from './about/About';
 import Api from './api/Api';
-import axios from 'axios';
+import DetectTypeApi from './api/DetectTypeApi';
 
 import {
     BrowserRouter as Router,
@@ -38,8 +38,8 @@ const App = () => {
     // the reason that it is here is to not rerender it any time Home rendering
     useEffect( () => {
         const getTypes = async () => {
-            const response = await axios.get(
-                'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/types',
+            const response = await DetectTypeApi.get(
+                '/types',
                 {}
             );
             setTypes(response.data.types);

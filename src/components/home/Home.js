@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TypeList from './TypeList';
 import SearchBar from './SearchBar';
 import Result from './Result';
-import Axios from 'axios';
+import DetectTypeApi from '../api/DetectTypeApi';
 
 const Home = props => {
 
@@ -10,8 +10,8 @@ const Home = props => {
 
     const onSubmit = async term => {
         setResult({});
-        const response = await Axios.get(
-            'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/detect',
+        const response = await DetectTypeApi.get(
+            '/detect',
             { params: { company_name: term }}
         );
         
