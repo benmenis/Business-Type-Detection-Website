@@ -10,7 +10,7 @@ const Result = ({ result }) => {
     if (result.company_type){
         return(
             <div >
-                <h2 className="beforeresult">{`'${result.company_name}' is belong to \n type:`}</h2>
+                <h2 className="beforeresult">{`'${result.company_name}' is belong to type:`}</h2>
                 <h1 className="result">{result.company_type}</h1>
             </div>
         );
