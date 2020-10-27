@@ -16,10 +16,11 @@ const About = (props) => {
                 <p className="small">
                     this site and the API have been developed by us as the final project of Software Engineer BSc.
 
-                    <h4 className='mid'>
+
+                </p>
+                <h4 className='mid'>
                         Using Machine Learning models, we can find for you the type of a Company or a Business. 
                     </h4>
-                </p>
             </div>
             <br/>
             <div className="ui header big">
@@ -27,8 +28,8 @@ const About = (props) => {
             </div>
             <p className="small">
                 this web page is using API that develeoped by us to detect Company or Business type.
-                <h3>for this time it is working on companies in Israel only.</h3>
             </p>
+            <h3>for this time it is working on companies in Israel only.</h3>
             <footer>
                 for more information.. 
             </footer>

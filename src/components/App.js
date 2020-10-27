@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './home/Home';
 import About from './about/About';
 import Api from './api/Api';
+import axios from 'axios';
 
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
-    } from "react-router-dom";
+} from "react-router-dom";
 
 
 const App = () => {
 
     const [isActive, setIsActive] = useState({ home:'', about:'', api:'' });
+    const [types, setTypes] = useState([]);
 
     const changeActive = (s) => {
         const newIsActive = {  home:'', about:'', api:''};
@@ -30,6 +32,21 @@ const App = () => {
         
         setIsActive(newIsActive);
     } 
+
+    // that use effect is to load the types list from our api.
+    // then it is passed foward to Home and then to TypesList.
+    // the reason that it is here is to not rerender it any time Home rendering
+    useEffect( () => {
+        const getTypes = async () => {
+            const response = await axios.get(
+                'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/types',
+                {}
+            );
+            setTypes(response.data.types);
+        }
+
+        getTypes();
+    }, []);
 
     
     return(
@@ -61,7 +78,7 @@ const App = () => {
                         <About changeActive={changeActive}/>
                     </Route>
                     <Route path="/">
-                        <Home changeActive={changeActive}/>
+                        <Home changeActive={changeActive} types={types}/>
                     </Route>
                 </Switch>
 

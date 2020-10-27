@@ -14,13 +14,11 @@ const Home = props => {
             'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1/detect',
             { params: { company_name: term }}
         );
-
-        console.log(response);
         
         setResult(response.data);
     };
 
-    // eslint-disable-next-line
+
     useEffect( () => {
         props.changeActive('home')
     }, []);
@@ -31,7 +29,7 @@ const Home = props => {
             <div className="ui grid">
                 <div className="ui row">
                     <div className="three wide column">
-                        <TypeList />
+                        <TypeList types={props.types}/>
                     </div>
 
                     <div className="one wide column" />
