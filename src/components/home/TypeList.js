@@ -1,4 +1,5 @@
 import React from 'react';
+import Spinner from './Spinner';
 
 const TypeList = ({ types }) => {
 
@@ -17,15 +18,21 @@ const TypeList = ({ types }) => {
 
 
 
+
     return(
         <div style= {{ textAlign:'center' }}>
             <h2 className="ui secondary inverted segment" >T Y P E S</h2>
-            <div 
-                className="ui items" 
-                style = {{ overflow:'scroll', height:'500px' }}
-                >
-                {renderedTypes}
-            </div>
+            {types.length ? 
+                <div 
+                    className="ui items" 
+                    style = {{ overflow:'scroll', height:'500px' }}
+                    >
+                    {renderedTypes}
+                </div> 
+                : <div style = {{ paddingTop:'100px' }}>
+                    <Spinner />
+                </div>
+            }
         </div>
     );
 }
