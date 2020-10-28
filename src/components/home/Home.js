@@ -3,6 +3,7 @@ import TypeList from './TypeList';
 import SearchBar from './SearchBar';
 import Result from './Result';
 import DetectTypeApi from '../api/DetectTypeApi';
+import Alert from './Alert';
 
 const Home = props => {
 
