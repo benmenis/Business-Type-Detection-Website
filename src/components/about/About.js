@@ -76,9 +76,9 @@ const About = (props) => {
                     <div className="ui header big">
                         <h3 className="big">Our Linkedin accounts</h3>
                     </div>
-                    <a className="small" href='https://www.linkedin.com/in/israel-ben-menachem-79123a161/'>Israel's Github</a>
+                    <a className="small" href='https://www.linkedin.com/in/israel-ben-menachem-79123a161/'>Israel's Linkedin</a>
                     <br/>
-                    <a className="small" href='https://www.linkedin.com/in/yuriy-kovalyov/'>Yuri's Github</a>
+                    <a className="small" href='https://www.linkedin.com/in/yuriy-kovalyov/'>Yuri's Linkedin</a>
                 </div>
             </div>
 
