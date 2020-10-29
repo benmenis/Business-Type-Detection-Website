@@ -25,7 +25,7 @@ const TypeList = ({ types }) => {
             {types.length ? 
                 <div 
                     className="ui items" 
-                    style = {{ overflow:'scroll', height:'500px' }}
+                    style = {{ overflow:'scroll', height:'450px' }}
                     >
                     {renderedTypes}
                 </div> 

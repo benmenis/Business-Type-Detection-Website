@@ -3,7 +3,6 @@ import TypeList from './TypeList';
 import SearchBar from './SearchBar';
 import Result from './Result';
 import DetectTypeApi from '../api/DetectTypeApi';
-import Alert from './Alert';
 
 const Home = props => {
 
@@ -26,7 +25,7 @@ const Home = props => {
 
 
     return(
-        <div className="ui container" style={{ marginTop:'50px' }}>
+        <div className="ui container" style={{ paddingTop:'150px' }}>
             <div className="ui grid">
                 <div className="ui row">
                     <div className="three wide column">

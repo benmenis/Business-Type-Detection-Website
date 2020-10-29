@@ -54,20 +54,23 @@ const App = () => {
             <div  >
 
                 <nav>
-                    <div className="ui inverted segment">
-                        <div className="ui inverted secondary pointing menu">
-                            <Link className={`item ${isActive.home}`} to="/" >Home</Link>
-                            <Link className={`item ${isActive.api}`} to="/api" >Api</Link>
-                            <Link className={`item ${isActive.about}`} to="/about" >About</Link>
-                            <div className="right menu" style={{  }}>
-                                <a href='https://github.com/benmenis' className="ui item">
-                                    <h3>
-                                        <i className="github icon"/>
-                                    </h3>                               
-                                </a>
+                    <div style={{ position:'fixed', top:'0',right:'0',left:'0', zIndex:'999'}}>
+                        <div className="ui inverted segment" >
+                            <div className="ui inverted secondary pointing menu" >
+                                <Link className={`item ${isActive.home}`} to="/" >Home</Link>
+                                <Link className={`item ${isActive.api}`} to="/api" >Api</Link>
+                                <Link className={`item ${isActive.about}`} to="/about" >About</Link>
+                                <div className="right menu" style={{  }}>
+                                    <a href='https://github.com/benmenis' className="ui item">
+                                        <h3>
+                                            <i className="github icon"/>
+                                        </h3>                               
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </nav>
 
                 <Switch>
