@@ -16,7 +16,7 @@ const About = (props) => {
 
                 <div>
                     <p className="small" style = {{  margin: '0' }}>
-                        this site and the API have been developed by us as the final project of Software Engineer BSc. 
+                        This site and the API have been developed by us as the final project of Software Engineer BSc. 
                     </p>
                     <h3 className='mid' style = {{ margin: '0' }}>
                         Using Machine Learning models, we can find for you the type of a Business or a Company. 
@@ -31,12 +31,12 @@ const About = (props) => {
                         <h3 className="big">What's it about?</h3>
                     </div>
                     <p className="small" style = {{ margin: '0' }}>
-                        this web page is using API develeoped by us to detect Company or Business type.
-                        the type is one of 32 types that we defined.
+                        This web page is using API develeoped by us to detect Company or Business type.
+                        The type is one of 32 types that we defined.
                     </p>
-                    <h3 style = {{ margin: '0' }}>for this time it is working on businesses and companies in Israel only.</h3>
+                    <h3 style = {{ margin: '0' }}>Unfortunately, for this time it is working on businesses and companies in Israel only.</h3>
                     <p className="small" >
-                        You can navigate to Api tab read more about our api and how to use it. 
+                        You can navigate to Api tab to read more about our api and how to use it. 
                     </p>
                 </div>
 
@@ -47,13 +47,13 @@ const About = (props) => {
                     <div className="ui header big">
                         <h3 className="big">How is it working?</h3>
                     </div>
-                    <p className="small" style = {{ display:'inline', margin: '0' }}>
-                        behind the scenes, there is a Machine Learning model that we have fitted with some data that includes some businesses and their types.
-                        the model and some other functions and algorithms are storing in our api server. 
-                        by enter some business name, you actualy sending a request to our api, then the api use the ML model to predict the type and sends it back.
+                    <p className="small" style = {{ margin: '0' }}>
+                        Behind the scenes, there is a Machine Learning model that we have fitted with some data that includes some businesses and their types.
+                        The model and some other functions and algorithms are storing in our api server. 
+                        By enter some business name, you actualy sending a request to our api, then the api use the ML model to predict the type and sends it back.
                     </p>
                     <p className="small">
-                        you can tap on the Github icon on the up-right corner to see the origin Code and some other things about this project.
+                        You can tap on the Github icon on the up-right corner to see the origin Code and some other things about this project.
                     </p>
                 </div>
 
