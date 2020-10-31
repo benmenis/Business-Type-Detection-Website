@@ -66,7 +66,7 @@ const About = (props) => {
                     </div>
                     <a className="small" href='https://github.com/benmenis'>Israel's Github</a>
                     <br/>
-                    <a className="small" href='https://github.com/benmenis'>Yuri's Github</a>
+                    <a className="small" href='https://github.com/KovalyovYura'>Yuri's Github</a>
                 </div>
 
                 <br/>

@@ -29,7 +29,7 @@ const Api = (props) => {
 
                 <div>
                     <div className="ui header big">
-                        <h3 className="big">why to use it?</h3>
+                        <h3 className="big">Why to use it?</h3>
                     </div>
                     <p className="small" style = {{ margin: '0' }}>
                         Our Api has developed to let you get a business type for free. 
@@ -55,16 +55,16 @@ const Api = (props) => {
                     <p className="small" style = {{ margin: '0' }}>
                         For using the Api, you have to send HTTP request with our base URL, which is - 
                     </p>
-                    <h4 className='small' style={{margin:'0'}}>'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1'</h4>
+                    <p className='small' style={{margin:'0'}}><code>'https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1'</code></p>
                     <h3 className='mid'>Get a business type</h3>
                     <p className="small" style = {{ margin: '0' }}>
-                        To get the a business type you will need to add '/detect' to the end of the Base URL.
-                        In addition, in the params object, the Api expects to receive 'company_name' parmeter.
+                        To get the a business type you will need to add <code>'/detect'</code> to the end of the Base URL.
+                        In addition, in the params object, the Api expects to receive <code>'company_name'</code> parmeter,
                         there you can pass your business name as the value.
                     </p>
                     <h3 className='mid'>Get the types list</h3>
                     <p className="small" style = {{ margin: '0' }}>
-                        In order to get the list of 32 types that we have defined, you will need to add '/types' to the end of the Base URL.
+                        In order to get the list of 32 types that we have defined, you will need to add <code>'/types'</code> to the end of the Base URL.
                         There is not an expectation to any param, so you need to pass an empty params object.
                     </p>
                 </div>
@@ -76,19 +76,27 @@ const Api = (props) => {
                     <div className="ui header big">
                         <h3 className="big">Simple Javascript Example</h3>
                     </div>
-                    <img src='https://www.google.com/imgres?imgurl=https%3A%2F%2Fs3.us-west-2.amazonaws.com%2Fprocesswire-forums%2Fmonthly_10_2014%2Fpost-2613-0-68134200-1412601082.png&imgrefurl=https%3A%2F%2Fprocesswire.com%2Ftalk%2Ftopic%2F7840-how-to-use-jquery-javascript-code-online-version-in-pw%2F&tbnid=5J0ckSdfcZWvxM&vet=12ahUKEwjhp6WjkdvsAhUOShoKHSO8A4AQMygJegUIARDhAQ..i&docid=5STWuQcGE7YmLM&w=613&h=344&q=javascript%20code&ved=2ahUKEwjhp6WjkdvsAhUOShoKHSO8A4AQMygJegUIARDhAQ' />
-                </div>
-
-                <br/>
-                <br/>
-
-                <div>
-                    <div className="ui header big">
-                        <h3 className="big">Our Linkedin accounts</h3>
+                    <div className="ui instructive bottom attached segment">
+                        <pre>
+                            <code>
+                                <span>const baseURL = "https://27j137v1id.execute-api.us-east-2.amazonaws.com/v1"</span>
+                                <span>{"\n\n\n\n"}// To get a Business type {"\n\n"}</span>
+                                <span>
+                                fetch(`${"{baseURL}"}/detect?company_name=your-company-name`)     
+                                </span>
+                                <span>
+                                    {"\n"}.then(response =&#62; {"{your function}"})
+                                </span>
+                                <span>{"\n\n\n\n"}// To get a types list {"\n\n"}</span>
+                                <span>
+                                    fetch(`${"{baseURL}"}/types`)     
+                                </span>
+                                <span>
+                                    {"\n"}.then(response =&#62; {"{your function}"})
+                                </span>
+                            </code>
+                        </pre>
                     </div>
-                    <a className="small" href='https://www.linkedin.com/in/israel-ben-menachem-79123a161/'>Israel's Linkedin</a>
-                    <br/>
-                    <a className="small" href='https://www.linkedin.com/in/yuriy-kovalyov/'>Yuri's Linkedin</a>
                 </div>
             </div>
 
