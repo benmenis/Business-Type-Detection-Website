@@ -10,12 +10,16 @@ const Home = props => {
 
     const onSubmit = async term => {
         setResult({});
-        const response = await DetectTypeApi.get(
-            '/detect',
-            { params: { company_name: term }}
-        );
-        
-        setResult(response.data);
+        try{
+            const response = await DetectTypeApi.get(
+                '/detect',
+                { params: { company_name: term }}
+            );
+            setResult(response.data);
+        }
+        catch{
+            setResult('error');
+        }
     };
 
 

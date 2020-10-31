@@ -6,6 +6,14 @@ const Result = ({ result }) => {
     if (!result){
         return null;
     }
+    if (result === 'error'){
+        return (
+            <div >
+                <h2 className="beforeresult">There was some Error</h2>
+                <h1 className="result">Please try again!</h1>
+            </div>
+        );
+    }
 
     if (result.company_type){
         return(
