@@ -61,7 +61,7 @@ const App = () => {
                                 <Link className={`item ${isActive.api}`} to="/api" >Api</Link>
                                 <Link className={`item ${isActive.about}`} to="/about" >About</Link>
                                 <div className="right menu" style={{  }}>
-                                    <a href='https://github.com/benmenis' className="ui item">
+                                    <a href='https://github.com/benmenis/Business-Type-Detection-Website' className="ui item">
                                         <h3>
                                             <i className="github icon"/>
                                         </h3>                               
